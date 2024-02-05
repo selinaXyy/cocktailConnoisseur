@@ -1,4 +1,4 @@
-********************************** Project Key Features ************************************
+********************************** Project Key Features ************************************          
 • Seamless interface with TheCocktailDB API using Axios npm package.
 • Local host operation for efficient performance.
 • Tailored cocktail search and generation of filtered recipes.
