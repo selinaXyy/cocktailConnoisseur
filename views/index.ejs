@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cocktail Recipe</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+        <link href="/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <% if (locals.drinkName && locals.drinkInstructions && locals.ingredientArr && locals.ingredientMeasurementArr && locals.cocktailImg) {%>
+            <div class="container">
+                <div class="recipeCard">
+                    <img id="cocktailImg" src="<%= cocktailImg %>">
+                    <h1 id="cocktailName"><%= drinkName %></h1>
+    
+                    <div class="recipeContent">
+                        <div id="instructions">
+                            <%= drinkInstructions %>
+                        </div>
+    
+                        <div id="ingredients">
+                            <ul>
+                                <% for (let i = 0; i < ingredientArr.length; i++) { %>
+                                    <li>
+                                        <%= ingredientArr[i] %>
+                                            <% if (i < ingredientMeasurementArr.length) {%>
+                                                 -- <%= ingredientMeasurementArr[i] %>
+                                            <% } %>
+                                    </li>
+                                <% } %>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <% } else { %>
+            <div class="container">
+                <div class="recipeCard">
+                    <div class="choices">
+                        <form id="form" action="/" method="POST">
+                            <select name="type" id="type">
+                                <option value="" data-display="Select">Lookup a random cocktail</option>
+                                <option value="cocktailName">Search cocktail by name</option>
+                                <option value="cocktailIngredient">Search cocktail by ingredient</option>
+                            </select>
+    
+                            <input name="filter" id="filter">
+    
+                            <button type="submit">GO</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        <% } %>
+
+        <script>
+            document.getElementById("filter").style.display = "none";
+
+            document.getElementById("type").addEventListener("change",()=>{
+                var userChosenType = document.getElementById("type").value;
+                var filter = document.getElementById("filter");
+
+                if (userChosenType === "cocktailName"){
+                    filter.style.display = "inline-block";
+                    filter.placeholder = "Enter cocktail name";
+                }
+                else if (userChosenType === "cocktailIngredient"){
+                    filter.style.display = "inline-block";
+                    filter.placeholder = "Enter ingredient name";
+                }
+                else{
+                    filter.style.display = "none";
+                }
+            });
+        </script>
+    </body>
+</html>

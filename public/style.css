@@ -1,0 +1,99 @@
+body{
+    background-color: #1d1d1d;
+}
+
+.container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.recipeCard{
+    background-color: #2b2b2b;
+    width:67%;
+    height:80%;
+    border-radius: 20px;
+    box-shadow: 8px 0 20px rgb(173, 173, 173), -8px 0 20px rgb(173, 173, 173);
+    text-align: center;
+}
+
+#cocktailImg{
+    width:180px;
+    height:180px;
+    border-radius: 50%;
+    margin-top: 2rem;
+}
+
+#cocktailName{
+    color: aliceblue;
+    font-family: 'Pacifico', cursive;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.recipeContent{
+    margin-top: 1.5rem;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#instructions{
+    grid-area: 1 / 1 / 2 / 2;
+    padding-left: 2rem;
+    line-height: 1.3em;
+    font-size: 20px;
+    padding-right: 1.5rem;
+    color:rgb(162, 162, 162);
+}
+
+#ingredients{
+    grid-area: 1 / 2 / 2 / 3;
+    padding-left: 1.5rem;
+    line-height: 1.3em;
+    font-size: 20px;
+    padding-right: 2rem;
+    color:rgb(201, 201, 201);
+    font-weight: bold;
+    font-style: italic;
+    text-align: left;
+}
+
+#ingredients ul{
+    margin:0;
+}
+
+#form{
+    height:30rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#type, #filter{
+    height:3.2rem;
+    width:15rem;
+    border-radius: 8px;
+    font-size: 15px;
+    border:none;
+    margin-right: 1.5rem;
+}
+
+#filter::placeholder{
+    padding-left: 0.5rem;
+}
+
+#filter{
+    padding-left: 1em;
+}
+
+#form button{
+    height:3.2rem;
+    width:8rem;
+    border-radius: 7px;
+    font-size: 18px;
+    border:none;
+    background-color: rgba(255,255,255,70%);
+}
+
