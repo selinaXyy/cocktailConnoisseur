@@ -37,4 +37,4 @@ npm i express body-parser axios ejs
 2. Navigate to the project directory.
 3. Run the application using 'node index.js' command.
 
-Now explore, discover, and mix up your favorite cocktails with ease. 🍸🍹🥃           
+### _Now explore, discover, and mix up your favorite cocktails with ease. 🍸🍹🥃_       
