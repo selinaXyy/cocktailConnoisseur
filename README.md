@@ -6,12 +6,12 @@ Welcome to the Cocktail Generator, your one-stop solution for discovering and cr
 
 **Local Hosting:** Operate efficiently on the local host, optimizing performance for users.
 
-**Tailored Search Options:**
+**Tailored Search Options:**          
 _Random Generation:_ Get inspired by randomly generated cocktail recipes.          
 _Search by Name:_ Find specific cocktails by their names.              
 _Search by Ingredient:_ Explore recipes based on your preferred ingredients.            
 
-**Detailed Recipe Information:**
+**Detailed Recipe Information:**        
 _Vibrant Visuals:_ Enjoy a visual showcase of cocktails with vibrant images.          
 _Precise Instructions:_ Access detailed instructions for each cocktail.          
 _Ingredient Details:_ Get precise information on ingredients and their amounts.          
