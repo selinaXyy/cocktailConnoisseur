@@ -30,7 +30,7 @@ NPM (Node Package Manager)
 Run the following terminal commands to set up the program:
 
 npm init                                    
-npm i express body-parser axios ejs
+npm i 
 
 ## Usage
 1. Clone the repository to your local machine.
