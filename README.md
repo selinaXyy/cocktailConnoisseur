@@ -26,15 +26,15 @@ Ensure you have the following prerequisites installed on your device:
 Node.js        
 NPM (Node Package Manager)          
 
-## Installation
-Run the following terminal commands to set up the program:
-
-npm init                                    
-npm i 
-
 ## Usage
 1. Clone the repository to your local machine.
 2. Navigate to the project directory.
+   
+### Installation
+#### Run the following terminal command to set up the program:
+npm install 
+
 3. Run the application using 'node index.js' command.
+4. Open your web browser and go to http://localhost:3000 to view the application.
 
 ### _Now explore, discover, and mix up your favorite cocktails with ease. 🍸🍹🥃_       
