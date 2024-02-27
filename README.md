@@ -30,8 +30,8 @@ NPM (Node Package Manager)
 1. Clone the repository to your local machine.
 2. Navigate to the project directory.
    
-### Installation
-#### Run the following terminal command to set up the program:
+### _Installation_
+#### _Run the following terminal command to set up the program:_
 npm install 
 
 3. Run the application using 'node index.js' command.
