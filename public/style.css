@@ -1,6 +1,7 @@
 /* >992px & default*/
 body{
     background-color: #1d1d1d;
+    margin: auto;
 }
 
 .container{
@@ -44,6 +45,7 @@ body{
 }
 
 #type, #filter{
+    color: black;
     height:3.2rem;
     width:15rem;
     border-radius: 8px;
@@ -61,6 +63,7 @@ body{
 }
 
 #form button{
+    color: black;
     height:3.2rem;
     width:8rem;
     border-radius: 7px;
@@ -138,6 +141,7 @@ body{
 
 footer{
     font-size: 20px;
+    color:rgb(144, 144, 144);
 }
 
 footer a{
