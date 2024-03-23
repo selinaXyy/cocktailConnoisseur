@@ -20,18 +20,83 @@ body{
     text-align: center;
 }
 
+/* error */
+.errorCard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#error{
+    color: white;
+}
+
+/* home */
+.logo img{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+
+#form{
+    display:flex;
+    justify-content: center;
+}
+
+#type, #filter{
+    height:3.2rem;
+    width:15rem;
+    border-radius: 8px;
+    font-size: 15px;
+    border:none;
+    margin-right: 1.5rem;
+}
+
+#filter::placeholder{
+    padding-left: 0.5rem;
+}
+
+#filter{
+    padding-left: 1em;
+}
+
+#form button{
+    height:3.2rem;
+    width:8rem;
+    border-radius: 7px;
+    font-size: 18px;
+    border:none;
+    background-color: rgba(255,255,255,70%);
+}
+
+/* search */
+#cocktailName, #ingredientName{
+    color: aliceblue;
+    font-family: 'Pacifico', cursive;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+#ingredientName{
+    text-align: center;
+    font-size: 50px;
+}
+
+#ingredientDescription{
+    text-indent: 100px;
+    font-size: 18px;
+    line-height: 1.3em;
+    color:rgb(162, 162, 162);
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-bottom: 7rem;
+}
+
 #cocktailImg{
     width:180px;
     height:180px;
     border-radius: 50%;
     margin-top: 2rem;
-}
-
-#cocktailName{
-    color: aliceblue;
-    font-family: 'Pacifico', cursive;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
 }
 
 .recipeContent{
@@ -65,41 +130,10 @@ body{
     margin:0;
 }
 
-#form{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#type, #filter{
-    height:3.2rem;
-    width:15rem;
-    border-radius: 8px;
-    font-size: 15px;
-    border:none;
-    margin-right: 1.5rem;
-}
-
-#filter::placeholder{
-    padding-left: 0.5rem;
-}
-
-#filter{
-    padding-left: 1em;
-}
-
-#form button{
-    height:3.2rem;
-    width:8rem;
-    border-radius: 7px;
-    font-size: 18px;
-    border:none;
-    background-color: rgba(255,255,255,70%);
-}
-
 .footer{
     text-align: center;
     margin-bottom: 2rem;
+    margin-top: -3rem;
 }
 
 footer{
@@ -107,18 +141,91 @@ footer{
 }
 
 footer a{
-    color: blue;
+    color: rgb(108, 108, 215);
 }
 
-.logo img{
-    width: 300px;
-    height: 300px;
-}
+/* <= 992px*/
+@media (max-width:992px){  
+    .recipeCard{
+        background-color: #2b2b2b;
+        width:90%;
+        height:80%;
+        box-shadow: 5px 0 25px rgb(173, 173, 173), -5px 0 25px rgb(173, 173, 173);
+    }
 
-/* <= 576px (mobile phone)*/
-@media (max-with:576px){
     .logo img{
-        width: 200px;
-        height: 200px;
+        width: 180px;
+        height: 180px;
+    }
+
+    #form{
+        display:block;
+    }
+
+    #type, #filter{
+        display: block;
+        height:2rem;
+        width:9rem;
+        font-size: 12px;
+        margin: auto;
+        margin-bottom: 0.8rem;
+    }
+
+    #form button{
+        display:block;
+        height:2rem;
+        width:4rem;
+        font-size: 12px;
+        margin: auto;
+    }
+
+    #cocktailImg{
+        width:130px;
+        height:130px;
+        border-radius: 50%;
+        margin-top: 1.2rem;
+    }
+    
+    #cocktailName{
+        font-size:22px;
+        margin-top: 0.2rem;
+        margin-bottom: 0.4rem;
+    }
+    
+    .recipeContent{
+        margin-top: 0.8rem;
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    #instructions{
+        grid-area: 1 / 1 / 2 / 2;
+        padding-left: 1rem;
+        line-height: 1.3em;
+        font-size: 15px;
+        padding-right: 0;
+    }
+    
+    #ingredients{
+        grid-area: 1 / 2 / 2 / 3;
+        padding-left: 0;
+        font-size: 15px;
+        padding-right: 1rem;
+    }
+
+    #ingredientName{
+        text-align: center;
+        font-size: 30px;
+    }
+
+    #ingredientDescription{
+        text-indent: 50px;
+        font-size: 16px;
+        line-height: 1.3em;
+        margin-bottom: 5rem;
+    }
+    
+    footer{
+        font-size: 16px;
     }
 }

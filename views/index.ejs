@@ -13,7 +13,13 @@
     </head>
 
     <body>
-        <% if (locals.drinkName && locals.drinkInstructions && locals.ingredientArr && locals.ingredientMeasurementArr && locals.cocktailImg) {%>
+        <% if (locals.error) {%>
+            <div class="container">
+                <div class="recipeCard errorCard">
+                    <h2 id="error"><%= error %></h2>
+                </div>
+            </div>
+        <%} else if (locals.drinkName && locals.drinkInstructions && locals.ingredientArr && locals.ingredientMeasurementArr && locals.cocktailImg) {%>
             <div class="container">
                 <div class="recipeCard">
                     <img id="cocktailImg" src="<%= cocktailImg %>" alt="a picture of the cocktail">
@@ -39,6 +45,11 @@
                     </div>
                 </div>
             </div>
+        <% } else if (locals.ingredientName && locals.ingredientDescription) { %>
+            <div class="ingredientDescription">
+                <h1 id="ingredientName"><%= ingredientName %></h1>
+                <p id="ingredientDescription"><%= ingredientDescription %></p>
+            </div>
         <% } else { %>
             <div class="container">
                 <div class="recipeCard">
@@ -50,7 +61,7 @@
                             <select name="type" id="type">
                                 <option value="" data-display="Select">Lookup a random cocktail</option>
                                 <option value="cocktailName">Search cocktail by name</option>
-                                <option value="cocktailIngredient">Search cocktail by ingredient</option>
+                                <option value="cocktailIngredient">Learn about an ingredient</option>
                             </select>
     
                             <input name="filter" id="filter">
