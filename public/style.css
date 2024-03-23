@@ -1,3 +1,4 @@
+/* >992px & default*/
 body{
     background-color: #1d1d1d;
 }
@@ -65,7 +66,6 @@ body{
 }
 
 #form{
-    height:30rem;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -111,6 +111,14 @@ footer a{
 }
 
 .logo img{
-    width: 200;
-    height: 200;
+    width: 300px;
+    height: 300px;
+}
+
+/* <= 576px (mobile phone)*/
+@media (max-with:576px){
+    .logo img{
+        width: 200px;
+        height: 200px;
+    }
 }
