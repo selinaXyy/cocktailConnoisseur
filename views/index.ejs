@@ -13,11 +13,10 @@
     </head>
 
     <body>
-        <% if (locals.error) {%>
-            <div class="container">
-                <div class="recipeCard errorCard">
-                    <h2 id="error"><%= error %></h2>
-                </div>
+        <% if (locals.ingredientName && locals.ingredientDescription) {%>
+            <div class="ingredientDescription">
+                <h1 id="ingredientName"><%= ingredientName %></h1>
+                <p id="ingredientDescription"><%= ingredientDescription %></p>
             </div>
         <%} else if (locals.drinkName && locals.drinkInstructions && locals.ingredientArr && locals.ingredientMeasurementArr && locals.cocktailImg) {%>
             <div class="container">
@@ -45,10 +44,15 @@
                     </div>
                 </div>
             </div>
-        <% } else if (locals.ingredientName && locals.ingredientDescription) { %>
-            <div class="ingredientDescription">
-                <h1 id="ingredientName"><%= ingredientName %></h1>
-                <p id="ingredientDescription"><%= ingredientDescription %></p>
+        <% } else if (locals.error || locals.ingredientName) { %>
+            <div class="container">
+                <div class="recipeCard errorCard">
+                    <% if (locals.error) {%>
+                        <h2 id="error"><%= error %></h2>
+                    <%} else {%>
+                        <h2 id="error">"<%= ingredientName %>" had no description</h2>
+                    <% } %>
+                </div>
             </div>
         <% } else { %>
             <div class="container">
