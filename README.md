@@ -9,7 +9,7 @@ Welcome to the Cocktail Generator, your one-stop solution for discovering and cr
 **• Tailored Search Options:**           
   _• Random Generation:_ Get inspired by randomly generated cocktail recipes.          
   _• Search by Name:_ Find specific cocktails by their names.              
-  _• Search by Ingredient:_ Explore recipes based on your preferred ingredients.            
+  _• Learn about an Ingredient:_ Find out your flavor profiles, histories, and usages.            
 
 **• Detailed Recipe Information:**        
   _• Vibrant Visuals:_ Enjoy a visual showcase of cocktails with vibrant images.          
