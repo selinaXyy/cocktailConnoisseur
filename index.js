@@ -29,7 +29,7 @@ app.post("/", async (req,res)=>{
     }
 
     try {
-        const response = await axios.get(APIrequest);
+        let response = await axios.get(APIrequest);
         if (userChosenType == "cocktailIngredient"){
             const ingredient = response.data.ingredients[0];
             const ingredientName = ingredient.strIngredient;
@@ -42,7 +42,25 @@ app.post("/", async (req,res)=>{
 
         }
         else{
-            const drink = response.data.drinks[0];
+            let drinkIndex = 0;
+            let drink = response.data.drinks[drinkIndex];
+
+            while (drink.strInstructions.length > 583){
+                if (userChosenType == "cocktailName"){
+                    try{
+                        drinkIndex++;
+                        drink = response.data.drinks[drinkIndex];
+                    }
+                    catch{
+                        throw new TypeError(); //no recipe that has a queried name && length <= 583 exists
+                    }
+                }
+                else{
+                    response = await axios.get(APIrequest); //make a new request
+                    drink = response.data.drinks[0];
+                }
+            }
+
             const drinkName = drink.strDrink;
             const drinkInstructions = drink.strInstructions;
             const cocktailImg = drink.strDrinkThumb;
